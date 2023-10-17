@@ -9,16 +9,15 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
+//1er exemple sur la sécurite avec springboot
 @RestController
 //@RequestMapping("/api")
 public class EmployesController {
 	@GetMapping("/api/defaut")
 	public Employe getDefaut() {
-		return new Employe("Palmer", "Jack", "monpdp", 0);
+		return new Employe("Palmer", "Jack", "123456", 0);
 	}
 	@GetMapping("/")
 	public String redirige() {
